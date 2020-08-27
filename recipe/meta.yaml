@@ -18,20 +18,20 @@ requirements:
   host:
     - python
     - pip >=18.1
-    - google-api-core-grpcio-gcp >=1.9.0
-    - google-cloud-core >=1.0.0
-    - grpc-google-iam-v1 >=0.11.4
-    - six >=1.10.0
-    - enum34 >=1.1.6  # [py<=34]
+    - setuptools >=34.0.0
+
   run:
     - python
-    - google-api-core-grpcio-gcp
-    - google-cloud-core
-    - grpc-google-iam-v1
-    - six
-    - enum34  # [py<=34]
+    - google-api-core-grpcio-gcp >=1.14.0,<2.0.0dev
+    - google-cloud-core >=1.4.1,<2.0dev
+    - grpc-google-iam-v1 >=0.12.3,<0.13dev
+    - six >=1.10.0
+    - enum34 >=1.1.6  # [py<=34]
 
 test:
+  requires:
+    - python
+    - pip
   imports:
     - enum
     - google.api
@@ -129,10 +129,13 @@ test:
     - grpc_gcp
     - six
     - six.moves
+  commands:
+    - python -m pip check
+
 
 about:
-  home: https://github.com/googleapis/google-cloud-python
-  license: Apache 2.0
+  home: https://github.com/googleapis/python-spanner
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Python Client for Cloud Spanner
@@ -148,7 +151,7 @@ about:
     to hundreds or thousands of servers to handle the biggest transactional
     workloads.
 
-    - [Client Library Documentation](https://googleapis.github.io/google-cloud-python/latest/spanner/index.html)
+    - [Client Library Documentation](https://googleapis.dev/python/spanner/latest/index.html)
     - [Product Documentation](https://cloud.google.com/spanner/docs)
 
     Quick Start
@@ -169,9 +172,10 @@ about:
     -----------
     Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
 
-  doc_url: https://googleapis.github.io/google-cloud-python/latest/spanner/index.html
-  dev_url: https://github.com/googleapis/google-cloud-python/tree/master/spanner
+  doc_url: https://googleapis.dev/python/spanner/latest/index.html
+  dev_url: https://github.com/googleapis/python-spanner
 
 extra:
   recipe-maintainers:
     - BrentDorsey
+    - tswast
