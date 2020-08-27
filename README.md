@@ -1,9 +1,9 @@
 About google-cloud-spanner
 ==========================
 
-Home: https://github.com/googleapis/google-cloud-python
+Home: https://github.com/googleapis/python-spanner
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: BSD-3-Clause
 
@@ -20,7 +20,7 @@ unlike any other relational database service, Cloud Spanner scales horizontally
 to hundreds or thousands of servers to handle the biggest transactional
 workloads.
 
-- [Client Library Documentation](https://googleapis.github.io/google-cloud-python/latest/spanner/index.html)
+- [Client Library Documentation](https://googleapis.dev/python/spanner/latest/index.html)
 - [Product Documentation](https://cloud.google.com/spanner/docs)
 
 Quick Start
@@ -223,4 +223,5 @@ Feedstock Maintainers
 =====================
 
 * [@BrentDorsey](https://github.com/BrentDorsey/)
+* [@tswast](https://github.com/tswast/)
 
