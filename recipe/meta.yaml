@@ -10,132 +10,35 @@ source:
   sha256: 5bfc8a20526305d48645743e131b83fd734c255d5ca396d32a8a8cb0576db8df
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --verbose"
-  skip: True  # [win and vc<14]
+  number: 2
+  script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
   host:
-    - python
-    - pip >=18.1
-    - google-api-core-grpcio-gcp >=1.9.0
-    - google-cloud-core >=1.0.0
-    - grpc-google-iam-v1 >=0.11.4
-    - six >=1.10.0
-    - enum34 >=1.1.6  # [py<=34]
+    - python >=3.4
+    - pip
   run:
-    - python
-    - google-api-core-grpcio-gcp
-    - google-cloud-core
-    - grpc-google-iam-v1
-    - six
-    - enum34  # [py<=34]
+    - python >=3.4
+    - google-api-core-grpcio-gcp >=1.4.1,<2.0.0dev
+    - google-cloud-core >=1.0.0,<2.0dev
+    - grpc-google-iam-v1 >=0.11.4,<0.12dev
 
 test:
   imports:
-    - enum
-    - google.api
-    - google.api.annotations_pb2
-    - google.api.http_pb2
-    - google.api_core
-    - google.api_core.gapic_v1
-    - google.api_core.gapic_v1.config
-    - google.api_core.gapic_v1.method
-    - google.api_core.grpc_helpers
-    - google.api_core.operation
-    - google.api_core.operations_v1
-    - google.api_core.page_iterator
-    - google.api_core.path_template
-    - google.api_core.protobuf_helpers
-    - google.api_core.protobuf_helpers
-    - google.auth.credentials
     - google.cloud
-    - google.cloud.client
-    - google.cloud.exceptions
     - google.cloud.spanner
-    - google.cloud.spanner_admin_database_v1
-    - google.cloud.spanner_admin_database_v1.gapic
-    - google.cloud.spanner_admin_database_v1.gapic.database_admin_client
-    - google.cloud.spanner_admin_database_v1.gapic.database_admin_client_config
-    - google.cloud.spanner_admin_database_v1.gapic.enums
-    - google.cloud.spanner_admin_database_v1.gapic.transports
-    - google.cloud.spanner_admin_database_v1.gapic.transports.database_admin_grpc_transport
-    - google.cloud.spanner_admin_database_v1.proto
-    - google.cloud.spanner_admin_database_v1.proto.spanner_database_admin_pb2
-    - google.cloud.spanner_admin_database_v1.proto.spanner_database_admin_pb2_grpc
-    - google.cloud.spanner_admin_database_v1.types
-    - google.cloud.spanner_admin_instance_v1
-    - google.cloud.spanner_admin_instance_v1.gapic
-    - google.cloud.spanner_admin_instance_v1.gapic.enums
-    - google.cloud.spanner_admin_instance_v1.gapic.instance_admin_client
-    - google.cloud.spanner_admin_instance_v1.gapic.instance_admin_client_config
-    - google.cloud.spanner_admin_instance_v1.gapic.transports
-    - google.cloud.spanner_admin_instance_v1.gapic.transports.instance_admin_grpc_transport
-    - google.cloud.spanner_admin_instance_v1.proto
-    - google.cloud.spanner_admin_instance_v1.proto.spanner_instance_admin_pb2
-    - google.cloud.spanner_admin_instance_v1.proto.spanner_instance_admin_pb2_grpc
-    - google.cloud.spanner_admin_instance_v1.types
-    - google.cloud.spanner_v1
-    - google.cloud.spanner_v1._helpers
-    - google.cloud.spanner_v1.batch
-    - google.cloud.spanner_v1.client
-    - google.cloud.spanner_v1.database
-    - google.cloud.spanner_v1.gapic
-    - google.cloud.spanner_v1.gapic.enums
-    - google.cloud.spanner_v1.gapic.spanner_client
-    - google.cloud.spanner_v1.gapic.spanner_client_config
-    - google.cloud.spanner_v1.gapic.transports
-    - google.cloud.spanner_v1.gapic.transports.spanner_grpc_transport
-    - google.cloud.spanner_v1.instance
-    - google.cloud.spanner_v1.keyset
-    - google.cloud.spanner_v1.param_types
-    - google.cloud.spanner_v1.pool
-    - google.cloud.spanner_v1.proto
-    - google.cloud.spanner_v1.proto.keys_pb2
-    - google.cloud.spanner_v1.proto.keys_pb2_grpc
-    - google.cloud.spanner_v1.proto.mutation_pb2
-    - google.cloud.spanner_v1.proto.mutation_pb2_grpc
-    - google.cloud.spanner_v1.proto.query_plan_pb2
-    - google.cloud.spanner_v1.proto.query_plan_pb2_grpc
-    - google.cloud.spanner_v1.proto.result_set_pb2
-    - google.cloud.spanner_v1.proto.result_set_pb2_grpc
-    - google.cloud.spanner_v1.proto.spanner_pb2
-    - google.cloud.spanner_v1.proto.spanner_pb2_grpc
-    - google.cloud.spanner_v1.proto.transaction_pb2
-    - google.cloud.spanner_v1.proto.transaction_pb2_grpc
-    - google.cloud.spanner_v1.proto.type_pb2
-    - google.cloud.spanner_v1.proto.type_pb2_grpc
-    - google.cloud.spanner_v1.session
-    - google.cloud.spanner_v1.snapshot
-    - google.cloud.spanner_v1.streamed
-    - google.cloud.spanner_v1.transaction
-    - google.cloud.spanner_v1.types
-    - google.iam
-    - google.iam.v1
-    - google.iam.v1.iam_policy_pb2
-    - google.iam.v1.policy_pb2
-    - google.iam.v1.logging.audit_data_pb2
-    - google.longrunning
-    - google.longrunning.operations_grpc_pb2
-    - google.longrunning.operations_pb2
-    - google.oauth2
-    - google.protobuf
-    - google.protobuf.empty_pb2
-    - google.protobuf.field_mask_pb2
-    - google.protobuf.struct_pb2
-    - google.protobuf.timestamp_pb2
-    - google.rpc
-    - grpc
-    - grpc_gcp
-    - six
-    - six.moves
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/googleapis/google-cloud-python
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Python Client for Cloud Spanner'
+  summary: Python Client for Cloud Spanner
   description: |
     Python Client for Cloud Spanner
     -------------------------
@@ -175,3 +78,4 @@ about:
 extra:
   recipe-maintainers:
     - BrentDorsey
+    - xylar
