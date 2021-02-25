@@ -1,5 +1,5 @@
 {% set name = "google-cloud-spanner" %}
-{% set version = "1.9.0" %}
+{% set version = "1.19.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5bfc8a20526305d48645743e131b83fd734c255d5ca396d32a8a8cb0576db8df
+  sha256: 50c375d8224415b7b7cc19a720c745cd8fb49144db50b252d06c42121374312d
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -20,9 +20,9 @@ requirements:
     - pip
   run:
     - python >=3.4
-    - google-api-core-grpcio-gcp >=1.4.1,<2.0.0dev
-    - google-cloud-core >=1.0.0,<2.0dev
-    - grpc-google-iam-v1 >=0.11.4,<0.12dev
+    - google-api-core-grpcio-gcp >=1.14.0,<2.0.0dev
+    - google-cloud-core >=1.4.1,<2.0dev
+    - grpc-google-iam-v1 >=0.12.3,<0.13dev
 
 test:
   imports:
