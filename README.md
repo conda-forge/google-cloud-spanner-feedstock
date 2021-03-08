@@ -1,7 +1,7 @@
 About google-cloud-spanner
 ==========================
 
-Home: https://github.com/googleapis/google-cloud-python
+Home: https://github.com/googleapis/python-spanner
 
 Package license: Apache-2.0
 
@@ -9,9 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-sp
 
 Summary: Python Client for Cloud Spanner
 
-Development: https://github.com/googleapis/google-cloud-python/tree/master/spanner
+Development: https://github.com/googleapis/python-spanner
 
-Documentation: https://googleapis.github.io/google-cloud-python/latest/spanner/index.html
+Documentation: https://googleapis.dev/python/spanner/latest/index.html
 
 Python Client for Cloud Spanner
 -------------------------
