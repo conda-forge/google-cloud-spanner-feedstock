@@ -1,5 +1,5 @@
 {% set name = "google-cloud-spanner" %}
-{% set version = "3.14.0" %}
+{% set version = "3.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 40e50c79d46f6c4103c2bd5122c4bcb4476f93ef8e98f0570b84395cbcd6012b
+  sha256: 77577cd5c52d42ee83a8aa29bf4f361e59a049838059475a05804b8f31720b63
 
 build:
   number: 0
@@ -23,10 +23,12 @@ requirements:
     - google-api-core-grpcio-gcp >=1.31.5,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.0
     - google-cloud-core >=1.4.1,<3.0.0dev
     - grpc-google-iam-v1 >=0.12.4,<1.0.0dev
-    - libcst >=0.2.5
     - packaging >=14.3
-    - proto-plus >=1.15.0,!=1.19.6
+    - proto-plus >=1.15.0,<2.0.0dev,!=1.19.6
+    - protobuf >=3.19.0,<4.0.0dev
     - sqlparse >=0.3.0
+    # libcst extra
+    - libcst >=0.2.5
 
 test:
   imports:
