@@ -7,7 +7,7 @@ Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-spanner-feedstock/blob/main/LICENSE.txt)
 
-Summary: Python Client for Cloud Spanner
+Summary: Google Cloud Spanner API client library
 
 Development: https://github.com/googleapis/python-spanner
 
