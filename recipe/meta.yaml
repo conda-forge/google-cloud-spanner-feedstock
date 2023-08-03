@@ -1,5 +1,5 @@
 {% set name = "google-cloud-spanner" %}
-{% set version = "3.38.0" %}
+{% set version = "3.39.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-spanner-{{ version }}.tar.gz
-  sha256: f89a6b918d8753a46391aad0ef821e9a40fc942dc25b9df1d240f086b5ff8d19
+  sha256: e0e458e38139f26db46cf088aafd752ddee409d17934e1088646f0950c50b2e1
 
 build:
   number: 0
