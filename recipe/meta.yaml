@@ -1,5 +1,5 @@
 {% set name = "google-cloud-spanner" %}
-{% set version = "3.44.0" %}
+{% set version = "3.45.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/google-cloud-spanner-{{ version }}.tar.gz
-  sha256: 353cc0b06fd4567d81c4fc14c44fd99d7aa4080f4bc21983468ab72ddb2d2c8a
+  sha256: 30ab56ea4ac6aa743784298f821e0de654401937b40c60cc7a0a545284a91b43
 
 build:
   number: 0
@@ -30,7 +30,6 @@ requirements:
     - protobuf >=3.19.5,<5.0.0dev,!=3.20.0,!=3.20.1,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
     # libcst extra
     - libcst >=0.2.5
-    - deprecated >=1.2.14
 
 test:
   imports:
