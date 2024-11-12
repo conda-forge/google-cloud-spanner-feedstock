@@ -1,13 +1,13 @@
 {% set name = "google-cloud-spanner" %}
-{% set version = "3.49.1" %}
+{% set version = "3.50.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c064d1175319f8c9b634a3888de226f4ec70493f7ec08a45321a4b17a47fc3ca
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: d585aa9c2adca1ec494db93706ea0a51bce924a4e154800e049e5599adc9deb5
 
 build:
   number: 0
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - google-api-core >=1.34.0,<3.0.0dev,!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,!=2.4.*,!=2.5.*,!=2.6.*,!=2.7.*,!=2.8.*,!=2.9.*,!=2.10.*
     - google-api-core-grpc
     - google-cloud-core >=1.4.4,<3.0dev
@@ -39,6 +39,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
@@ -47,39 +48,6 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  description: |
-    Python Client for Cloud Spanner
-    -------------------------
-
-    [Cloud Spanner]() is the world's first fully managed relational database service
-    to offer both strong consistency and horizontal scalability for
-    mission-critical online transaction processing (OLTP) applications. With Cloud
-    Spanner you enjoy all the traditional benefits of a relational database; but
-    unlike any other relational database service, Cloud Spanner scales horizontally
-    to hundreds or thousands of servers to handle the biggest transactional
-    workloads.
-
-    - [Client Library Documentation](https://googleapis.github.io/google-cloud-python/latest/spanner/index.html)
-    - [Product Documentation](https://cloud.google.com/spanner/docs)
-
-    Quick Start
-    -----------
-
-    In order to use this library, you first need to go through the following steps:
-
-    1. [Select or create a Cloud Platform project.](https://console.cloud.google.com/project)
-    2. [Enable billing for your project.](https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project)
-    3. [Enable the Google Cloud Language API.](https://cloud.google.com/natural-language)
-    4. [Setup Authentication.](https://googleapis.github.io/google-cloud-python/latest/core/auth.html)
-
-    Supported Python Versions
-    -----------
-    Python >= 3.5
-
-    Deprecated Python Versions
-    -----------
-    Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
-
   doc_url: https://googleapis.dev/python/spanner/latest/index.html
   dev_url: https://github.com/googleapis/python-spanner
 

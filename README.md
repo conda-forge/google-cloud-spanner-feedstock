@@ -13,39 +13,6 @@ Development: https://github.com/googleapis/python-spanner
 
 Documentation: https://googleapis.dev/python/spanner/latest/index.html
 
-Python Client for Cloud Spanner
--------------------------
-
-[Cloud Spanner]() is the world's first fully managed relational database service
-to offer both strong consistency and horizontal scalability for
-mission-critical online transaction processing (OLTP) applications. With Cloud
-Spanner you enjoy all the traditional benefits of a relational database; but
-unlike any other relational database service, Cloud Spanner scales horizontally
-to hundreds or thousands of servers to handle the biggest transactional
-workloads.
-
-- [Client Library Documentation](https://googleapis.github.io/google-cloud-python/latest/spanner/index.html)
-- [Product Documentation](https://cloud.google.com/spanner/docs)
-
-Quick Start
------------
-
-In order to use this library, you first need to go through the following steps:
-
-1. [Select or create a Cloud Platform project.](https://console.cloud.google.com/project)
-2. [Enable billing for your project.](https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project)
-3. [Enable the Google Cloud Language API.](https://cloud.google.com/natural-language)
-4. [Setup Authentication.](https://googleapis.github.io/google-cloud-python/latest/core/auth.html)
-
-Supported Python Versions
------------
-Python >= 3.5
-
-Deprecated Python Versions
------------
-Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
-
-
 Current build status
 ====================
 
