@@ -1,5 +1,5 @@
 {% set name = "google-cloud-spanner" %}
-{% set version = "3.59.0" %}
+{% set version = "3.60.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: dec7a78bfe1f94aef508ff9c61dba4196f3c70c83a0f75c271b4652686d08641
+  sha256: 65ddc72f2da3fd9ab1e98d7f2cbab1e2b1553221e6fc5b1c77c36ec439ba53cc
 
 build:
   number: 0
@@ -29,6 +29,12 @@ requirements:
     - proto-plus >=1.22.0,<2.0.0
     - sqlparse >=0.4.4
     - protobuf >=3.20.2,<7.0.0,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+    - opentelemetry-api >=1.22.0
+    - opentelemetry-sdk >=1.22.0
+    - opentelemetry-semantic-conventions >=0.43b0
+    - opentelemetry-resourcedetector-gcp >=1.8.0a0
+    - google-cloud-monitoring >=2.16.0
+    - mmh3 >=4.1.0
     # libcst extra
     - libcst >=0.2.5
 
