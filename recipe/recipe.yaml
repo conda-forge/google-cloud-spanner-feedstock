@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-spanner
-  version: 3.62.0
+  version: "3.63.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: a25bdbfda84bc7a819f04e45473187d8670711fd5ec827cf442e3664661d1d23
+  sha256: e2a4fb3bdbad4688645f455d498705d3f935b7c9011f5c94c137b77569b47a62
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
