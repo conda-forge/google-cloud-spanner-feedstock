@@ -39,6 +39,7 @@ requirements:
     - opentelemetry-resourcedetector-gcp >=1.8.0a0
     - google-cloud-monitoring >=2.16.0
     - mmh3 >=4.1.0
+    # libcst extra
     - libcst >=0.2.5
 
 tests:
@@ -53,8 +54,8 @@ about:
   summary: Google Cloud Spanner API client library
   license: Apache-2.0
   license_file: LICENSE
-  homepage: https://github.com/googleapis/python-spanner
-  repository: https://github.com/googleapis/python-spanner
+  homepage: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-spanner
+  repository: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-spanner
   documentation: https://googleapis.dev/python/spanner/latest/index.html
 
 extra:
