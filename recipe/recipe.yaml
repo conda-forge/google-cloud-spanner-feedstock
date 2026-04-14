@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-spanner
-  version: "3.64.0"
+  version: "3.65.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 02c26601eaaef6abba78efe5c55187b16550aeab0671ed0a65ab2d78bf7c019e
+  sha256: 434139bd1439528398cd2a96e390a57182420747c214a33f317bbac64afd9c5c
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     # more restrictive constraint for python >=3.11
     - proto-plus >=1.22.2,<2.0.0
     - sqlparse >=0.4.4
-    - protobuf >=3.20.2,<7.0.0,!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5
+    - protobuf >=4.25.8,<8.0.0
     - grpc-interceptor >=0.15.4
     - opentelemetry-api >=1.22.0
     - opentelemetry-sdk >=1.22.0
@@ -39,7 +39,6 @@ requirements:
     - opentelemetry-resourcedetector-gcp >=1.8.0a0
     - google-cloud-monitoring >=2.16.0
     - mmh3 >=4.1.0
-    # libcst extra
     - libcst >=0.2.5
 
 tests:
