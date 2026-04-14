@@ -3,13 +3,13 @@ About google-cloud-spanner-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/google-cloud-spanner-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/googleapis/python-spanner
+Home: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-spanner
 
 Package license: Apache-2.0
 
 Summary: Google Cloud Spanner API client library
 
-Development: https://github.com/googleapis/python-spanner
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-spanner
 
 Documentation: https://googleapis.dev/python/spanner/latest/index.html
 
