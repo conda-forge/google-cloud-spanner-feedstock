@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-spanner
-  version: "3.65.0"
+  version: "3.66.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 434139bd1439528398cd2a96e390a57182420747c214a33f317bbac64afd9c5c
+  sha256: a5de352c9cce75ba1b1b2e767816b14c6d147815c7450dbf42aae34773fad3f5
 
 build:
   number: 0
