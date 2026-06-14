@@ -42,6 +42,7 @@ requirements:
     - opentelemetry-resourcedetector-gcp >=1.8.0a0
     - google-cloud-monitoring >=2.16.0
     - mmh3 >=4.1.0
+    # from libcst extra
     - libcst >=0.2.5
 
 tests:
@@ -49,7 +50,9 @@ tests:
       imports:
         - google.cloud
         - google.cloud.spanner
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       pip_check: true
 
 about:
