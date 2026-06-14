@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: google-cloud-spanner
-  version: "3.67.0"
+  version: "3.68.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 0a01173c2e29aa371173809a15ecb10794b168f1f2edad7c5789a44e47c25d15
+  sha256: 90c55751cfc35bd58554c5715eab8be544095e21e40a805eb4d0c61a2bf07091
 
 build:
   number: 0
@@ -42,6 +42,7 @@ requirements:
     - opentelemetry-resourcedetector-gcp >=1.8.0a0
     - google-cloud-monitoring >=2.16.0
     - mmh3 >=4.1.0
+    # from libcst extra
     - libcst >=0.2.5
 
 tests:
@@ -49,7 +50,9 @@ tests:
       imports:
         - google.cloud
         - google.cloud.spanner
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       pip_check: true
 
 about:
