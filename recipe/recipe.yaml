@@ -27,7 +27,7 @@ requirements:
     - google-api-core-grpc >=2.25.0,<3.0.0
     - google-auth >=2.14.1,<3.0.0,!=2.24.0,!=2.25.0
     - google-cloud-core >=2.0.0,<3.0.0
-    # more restrictive constraint for python >=3.14
+    # tightest of upstream's floors (python >=3.14)
     - grpcio >=1.75.1,<2.0.0
     - grpc-google-iam-v1 >=0.14.2,<1.0.0
     - proto-plus >=1.26.1,<2.0.0
